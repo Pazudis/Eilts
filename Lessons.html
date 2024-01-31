@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English</title>
+    <style>
+      body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4ebff;
+            color: #555;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .white-container {
+            flex: 1;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2.5%; /* Changed from 20px to percentage */
+            box-sizing: border-box;
+            width: 47%;
+            max-width: 100%;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column; /* Ensure content stacks vertically */
+            justify-content: space-between; /* Push content to the top and bottom */
+        }
+
+        header {
+            background-color: #410061;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            border-bottom: 2px solid #6c3483;
+            width: 100%;
+            margin-bottom: 5%;
+        }
+
+        nav {
+            background-color: #410061;
+            color: #fff;
+            padding: 0.5em;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 14%; /* Changed from 280px to percentage */
+        }
+
+        nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    margin: 1em; /* Increase the margin to add more spacing */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    display: block;
+    width: auto;
+}
+
+        nav button {
+            font-size: 1em;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #6c3483;
+        }
+
+        main {
+            flex: 1; /* Take remaining vertical space */
+            margin-left: 25%; /* Changed from 140px to percentage */
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        section img {
+            max-width: 100%; /* Changed from 200% to percentage */
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        
+
+        .copyright-text {
+            margin-top: auto; /* Push the text to the bottom of the container */
+            text-align: center; /* Center the text */
+        }
+
+        form {
+            max-width: 60%; /* Changed from 600px to percentage */
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+
+
+
+
+
+        
+        form {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #8e44ad;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6c3483;
+        }
+        
+
+
+        .white-container h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+
+
+
+
+
+
+
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Grey background color */
+    padding: 5%; /* Adjust as needed */
+    border-radius: 5%; /* Adjust as needed */
+    margin-top: -65%; /* Adjust to move the grey box closer to the title */
+}
+
+.profile-image {
+    flex: 1;
+    margin-right: 5%; /* Adjust as needed */
+}
+
+.user-info {
+    flex: 2;
+}
+
+.user-info label,
+.user-info p {
+    margin-bottom: 2,5%; /* Adjust as needed */
+}
+
+.additional-info {
+    margin-top: -20%; /* Adjust as needed */
+}
+
+.copyright-text {
+    margin-top: 5%; /* Adjust as needed */
+}
+
+.big-title {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+    font-size: xx-large;
+}
+
+
+        
+    </style>
+</head>
+<body>
+
+
+
+<nav>
+    <a href="index.html">
+        <button class="logo_button">
+            <img class="logo_bilde"
+            src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRuxG8WrsIawpFwTDcLQ3OUgYfySWLrQNTLF6nfBYt-cx5f8L6fYFUjA9wTmj1iBCMSrmSMBx6q1JAR0OLMxMU4BBF0=s2560"
+              alt="Logo" width="170" height="100">
+             
+        </button>
+    </a>
+    <a href="index.html"><button>Sākums</button></a>
+    <a href="Lessons.html"><button>Profils</button></a>
+    <a href="Practice.html"><button>Teorija</button></a>
+    <a href="About Us.html"><button>Uzdevumi</button></a>
+    <a href="Contact Us.html"><button>Atsauksmes</button></a>
+    <a href="kkjauns.html"><button>Par mums</button></a>
+
+</nav>
+
+<div class="white-container">
+
+    <h1 class="big-title" >Profils</h1>
+
+    <div class="profile-container">
+        <div class="profile-image">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTIePC22Gaf_wD5BARKglKKjXrTSHOLVBuebU-oE6v9i_AaWP0vrc_Sm4cw7Yw9R03X8CwaKKhMu5HGYMqrfnk1cIFIdQ=s2560" alt="Profile Picture" style="max-width: 100%; border-radius: 30px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        </div>
+
+        <div class="user-info">
+            <label for="username">Vārds Uzvārds</label>
+            <P></P>
+
+            <label for="password">Parole:  &emsp; ********</label>
+            
+        </div>
+         <img  /> </a>
+
+        <div >
+        <label for="gmail">Mail: &emsp;your.email@gmail.com</label>  <p></p>
+
+        <label for="phone">Telefona numurs: &emsp;123-456-7890</label>
+        
+        </div>
+
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="copyright-text">
+        <p>&copy; 2023 Eslit</p>
+    </div>
+</div>
+
+
+</body>
+</html>

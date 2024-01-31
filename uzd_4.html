@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English - Quiz</title>
+    <style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4ebff;
+    color: #555;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px
+}
+    
+.white-container {
+    margin: 0 auto;
+    width: 47%;
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes at least 100% of the viewport height */
+}
+
+    
+         header {
+            background-color: #410061;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            border-bottom: 2px solid #6c3483;
+        }
+
+        nav {
+            background-color: #410061;
+            color: #fff;
+            padding: 0.5em;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 14%; /* Changed from 280px to percentage */
+        }
+    
+        nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    margin: 1em; /* Increase the margin to add more spacing */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    display: block;
+    width: auto;
+}
+
+        nav button {
+            font-size: 1em;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    
+    nav a:hover {
+        background-color: #6c3483;
+    }
+    
+    main {
+            flex: 1; /* Take remaining vertical space */
+            margin-left: 25%; /* Changed from 140px to percentage */
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        section img {
+            max-width: 100%; /* Changed from 200% to percentage */
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .copyright-text {
+    text-align: center;
+    
+}
+
+    
+        form {
+            max-width: 60%; /* Changed from 600px to percentage */
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    
+    button {
+        background-color: #8e44ad;
+        color: #fff;
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #6c3483;
+    }
+    
+   
+    
+
+    
+    
+    
+    
+    
+    #quiz-container {
+  max-width: 100%;
+  margin: 10px auto; /* Adjusted margin */
+  background-color: #fff;
+  padding: 5px; /* Adjusted padding */
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 20%; /* Set a specific height, adjust as needed */
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+#quiz-container h1 {
+    color: #410061;
+    text-align: center;
+}
+    
+#question {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+
+#options {
+    list-style: none;
+    padding: 0;
+}
+    
+.option {
+  margin-bottom: 10px; /* Increased margin for spacing */
+  padding: 10px; /* Added padding for better visual separation */
+  border: 2px solid transparent; /* Increased border thickness */
+  transition: border-color 0.3s, background-color 0.3s;
+  cursor: pointer; /* Set cursor to pointer on hover */
+}
+
+.option:hover {
+  border-color: #6c3483; /* Dark purple border on hover */
+}
+
+.option.selected {
+  background-color: rgba(144, 238, 144, 0.5); /* Translucent green when selected */
+}
+
+.option.selected:hover {
+  background-color: rgba(144, 238, 144, 0.5); /* Translucent green even on hover when selected */
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+    
+    #next-btn {
+    display: none;
+    margin-top: 10px;
+    background-color: #8e44ad;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#next-btn:hover {
+    background-color: #6c3483;
+}
+    
+
+.button-container {
+    margin-top: auto; /* Push the button container to the bottom of the flex container */
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.left-button, .right-button {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+}
+
+        .left-button:hover, .right-button:hover {
+            background-color: #6c3483;
+        }
+
+        .big-title {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+    font-size: xx-large;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">
+        <button class="logo_button">
+            <img class="logo_bilde"
+            src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRuxG8WrsIawpFwTDcLQ3OUgYfySWLrQNTLF6nfBYt-cx5f8L6fYFUjA9wTmj1iBCMSrmSMBx6q1JAR0OLMxMU4BBF0=s2560"
+              alt="Logo" width="170" height="100">
+             
+        </button>
+    </a>
+    <a href="index.html"><button>Sākums</button></a>
+    <a href="Lessons.html"><button>Profils</button></a>
+    <a href="Practice.html"><button>Teorija</button></a>
+    <a href="About Us.html"><button>Uzdevumi</button></a>
+    <a href="Contact Us.html"><button>Atsauksmes</button></a>
+    <a href="kkjauns.html"><button>Par mums</button></a>
+</nav>
+
+<div class="white-container">
+
+
+    <header>
+        <h1>Welcome to Learn English4</h1>
+    </header>
+    <H2>  </H2>
+    <div  id="quiz-container">
+        
+        <div id="question-container"></div>
+        <ul id="options-container"></ul>
+        <button id="submit-btn" onclick="checkAnswer()">Submit</button>
+        <div id="result-container"></div>
+        <button id="try-again-btn" onclick="loadRandomQuestion()" style="display: none;">Try Again</button>
+        <button id="next-btn" onclick="loadNextQuestion()" style="display: none;">Next Question</button>
+      </div>
+      
+  
+      <script>
+        // Define quiz questions and answers
+        const quizData = [
+          {
+            question: "What is the capital of France?",
+            options: ["Berlin", "Madrid", "Paris", "Rome"],
+            correctAnswer: "Paris",
+            explanation: "Paris is the capital of France.",
+          },
+          // Add more questions as needed
+        ];
+      
+        let currentQuestionIndex = -1;
+      
+        function loadRandomQuestion() {
+  currentQuestionIndex = Math.floor(Math.random() * quizData.length);
+  showQuestion();
+  document.getElementById("try-again-btn").style.display = "none";
+  document.getElementById("next-btn").style.display = "none";
+    }
+      
+        function showQuestion() {
+          const questionContainer = document.getElementById("question-container");
+          const optionsContainer = document.getElementById("options-container");
+          const resultContainer = document.getElementById("result-container");
+          const submitBtn = document.getElementById("submit-btn");
+          const nextBtn = document.getElementById("next-btn");
+      
+          questionContainer.innerHTML = `<p id="question">${quizData[currentQuestionIndex].question}</p>`;
+      
+          let optionsHTML = "";
+          quizData[currentQuestionIndex].options.forEach((option, index) => {
+            optionsHTML += `<li class="option" onclick="selectOption(${index})">${option}</li>`;
+          });
+          optionsContainer.innerHTML = optionsHTML;
+      
+          resultContainer.innerHTML = "";
+          submitBtn.style.display = "block";
+          nextBtn.style.display = "none";
+        }
+      
+        function selectOption(optionIndex) {
+  const options = document.querySelectorAll(".option");
+  options.forEach((option, index) => {
+    option.style.backgroundColor = index === optionIndex ? "rgba(144, 238, 144, 0.5)" : "#fff";
+  });
+    }
+      
+    function checkAnswer() {
+  const options = document.querySelectorAll(".option");
+  const selectedOption = Array.from(options).findIndex(
+    (option) => option.style.backgroundColor === "rgba(144, 238, 144, 0.5)"
+  );
+
+  const resultContainer = document.getElementById("result-container");
+  const submitBtn = document.getElementById("submit-btn");
+  const tryAgainBtn = document.getElementById("try-again-btn");
+  const nextBtn = document.getElementById("next-btn");
+      
+  if (selectedOption === -1) {
+    resultContainer.innerHTML = "Please select an answer.";
+    return;
+  }
+
+  if (quizData[currentQuestionIndex].options[selectedOption] === quizData[currentQuestionIndex].correctAnswer) {
+    resultContainer.innerHTML = "Correct! " + quizData[currentQuestionIndex].explanation;
+    tryAgainBtn.style.display = "none";
+    nextBtn.style.display = "block";
+  } else {
+    resultContainer.innerHTML = "Wrong! " + quizData[currentQuestionIndex].explanation +
+      "<br>Correct answer: " + quizData[currentQuestionIndex].correctAnswer;
+    tryAgainBtn.style.display = "block";
+    nextBtn.style.display = "none";
+  }
+
+  submitBtn.style.display = "none";
+    }
+      
+        function loadNextQuestion() {
+          loadRandomQuestion();
+        }
+      
+        loadRandomQuestion(); // Load the first question on page load
+      </script>
+      
+      
+      <div class="button-container">
+        <a href="uzd_3.html" class="right-button">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYS0Tqify-cynmc5A9UPYWC4VVBM3RZ6Xgq6Jk1Mohb3fB7HAq1rEXZa3vXibkIHXUhaGnnNoWxbJCuiDtmeKjcnCGb1ew=s2560" width="50px"/>
+        </a>
+    
+        <div class="copyright-text">
+            <p>&copy; 2023 Eslit</p>
+        </div>
+    
+        <a href="uzd_5.html" class="right-button">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTLeB1jlLND8I0xYj8sccEl6pJ3uAqtzPDVHzSI_GJXxmwrqXpSsfX4ezi9JKrEiCn2u8w6jO0ybeI4KezAxnbPudF-jg=s2560" width="50px"> 
+        </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+</body>
+</html>

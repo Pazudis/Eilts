@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English</title>
+    <style>
+
+
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4ebff;
+    color: #555;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+        .white-container {
+            flex: 1;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 47%;
+            max-width: 100%;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative; /* Added for positioning */
+        }
+
+        header {
+            background-color: #410061;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            border-bottom: 2px solid #6c3483;
+        }
+
+        nav {
+    background-color: #410061;
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 14%;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    margin: 1em; /* Increase the margin to add more spacing */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    display: block;
+    width: auto;
+}
+
+        nav button {
+            font-size: 1em;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #6c3483;
+        }
+
+        main {
+            flex: 1; /* Take remaining vertical space */
+            margin-left: 20%;
+            
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        
+
+        .copyright-text {
+            margin-top: auto;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        
+        }
+
+
+        .image-button {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-button img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            height: 70px;
+            width: 200px;
+        }
+        .image-button img:hover {
+            background-color: #6c3483;
+        }
+        
+     form {
+    max-width: 600px;
+    margin: 0 auto 2em; /* Updated margin to reduce space at the top and move the questions up */
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #8e44ad;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6c3483;
+        }
+        
+
+
+
+
+
+
+
+        
+    </style>
+</head>
+<body>
+
+
+
+<nav>
+    <a href="index.html">
+        <button class="logo_button">
+            <img class="logo_bilde"
+            src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRuxG8WrsIawpFwTDcLQ3OUgYfySWLrQNTLF6nfBYt-cx5f8L6fYFUjA9wTmj1iBCMSrmSMBx6q1JAR0OLMxMU4BBF0=s2560"
+              alt="Logo" width="170" height="100">
+             
+        </button>
+    </a>
+    <a href="index.html"><button>Sākums</button></a>
+    <a href="Lessons.html"><button>Profils</button></a>
+    <a href="Practice.html"><button>Teorija</button></a>
+    <a href="About Us.html"><button>Uzdevumi</button></a>
+    <a href="Contact Us.html"><button>Atsauksmes</button></a>
+    <a href="kkjauns.html"><button>Par mums</button></a>
+
+</nav>
+
+<div class="white-container">
+    <h1 style="text-align: center; margin-bottom: 20px; margin-top: 0px;">Uzdevumi</h1>
+
+    <form id="quizForm" style="margin-top: 0;">
+        <div id="quizContent">
+            <!-- Questions and Options will be dynamically added here -->
+        </div>
+
+        <div id="quizControls">
+            <button type="button" id="prevButton" onclick="changeQuestion(-1)" disabled>Previous</button>
+            <button type="button" id="nextButton" onclick="changeQuestion(1)">Next</button>
+            <button type="button" id="submitButton" onclick="submitQuiz()" disabled>Submit</button>
+        </div>
+    </form>
+
+    <div id="quizResults" style="display: none; margin-top: 20px;">
+        <h2>Your Score:</h2>
+        <table id="resultsTable">
+            <!-- Quiz results will be displayed here -->
+        </table>
+
+        <div id="explanationDropdown" style="display: none; margin-top: 20px;">
+            <label for="explanationSelect">Explanation:</label>
+            <select id="explanationSelect" onchange="showExplanation()">
+                <option value="" disabled selected>Select an answer to see the explanation</option>
+                <!-- Explanation options will be dynamically added here -->
+            </select>
+        </div>
+    </div>
+
+    <script>
+        // Add your quiz data here
+        var quizData = [
+            {
+                question: "What is the capital of France?",
+                options: ["Berlin", "Madrid", "Paris", "Rome"],
+                correctAnswer: "Paris",
+                explanation: "Paris is the capital of France."
+            },
+            // Add more questions as needed
+        ];
+
+        var currentQuestion = 0;
+        var userAnswers = [];
+
+        function startQuiz() {
+            displayQuestion(currentQuestion);
+        }
+
+        function displayQuestion(index) {
+            var quizContent = document.getElementById("quizContent");
+            quizContent.innerHTML = `<h3>${quizData[index].question}</h3>`;
+
+            for (var i = 0; i < quizData[index].options.length; i++) {
+                quizContent.innerHTML += `
+                    <label>
+                        <input type="radio" name="answer" value="${quizData[index].options[i]}">
+                        ${quizData[index].options[i]}
+                    </label><br>
+                `;
+            }
+
+            updateControls();
+        }
+
+        function changeQuestion(offset) {
+            currentQuestion += offset;
+            displayQuestion(currentQuestion);
+        }
+
+        function submitQuiz() {
+            var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                userAnswers[currentQuestion] = selectedAnswer.value;
+                currentQuestion++;
+                if (currentQuestion < quizData.length) {
+                    displayQuestion(currentQuestion);
+                } else {
+                    showResults();
+                }
+            }
+        }
+
+        function showResults() {
+            var quizResults = document.getElementById("quizResults");
+            var resultsTable = document.getElementById("resultsTable");
+            var explanationDropdown = document.getElementById("explanationDropdown");
+
+            resultsTable.innerHTML = "";
+
+            for (var i = 0; i < quizData.length; i++) {
+                resultsTable.innerHTML += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${quizData[i].question}</td>
+                        <td>${userAnswers[i] === quizData[i].correctAnswer ? 'Correct' : 'Incorrect'}</td>
+                    </tr>
+                `;
+            }
+
+            showExplanationDropdown();
+            quizResults.style.display = "block";
+        }
+
+        function showExplanationDropdown() {
+            var explanationDropdown = document.getElementById("explanationDropdown");
+            var explanationSelect = document.getElementById("explanationSelect");
+
+            explanationSelect.innerHTML = "";
+
+            for (var i = 0; i < quizData.length; i++) {
+                explanationSelect.innerHTML += `
+                    <option value="${i}">${i + 1}. ${quizData[i].question}</option>
+                `;
+            }
+
+            explanationDropdown.style.display = "block";
+        }
+
+        function showExplanation() {
+            var explanationSelect = document.getElementById("explanationSelect");
+            var selectedQuestionIndex = explanationSelect.value;
+
+            if (selectedQuestionIndex !== "") {
+                alert(quizData[selectedQuestionIndex].explanation);
+            }
+        }
+
+        function updateControls() {
+            var prevButton = document.getElementById("prevButton");
+            var nextButton = document.getElementById("nextButton");
+            var submitButton = document.getElementById("submitButton");
+
+            prevButton.disabled = currentQuestion === 0;
+            nextButton.disabled = currentQuestion === quizData.length - 1;
+            submitButton.disabled = currentQuestion < quizData.length - 1;
+        }
+
+        startQuiz();
+    </script>
+</div>
+
+
+</body>
+</html>

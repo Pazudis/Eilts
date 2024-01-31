@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English</title>
+    <style>
+       
+       body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4ebff;
+    color: #555;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px
+}
+
+        .container {
+    margin: 0 auto;
+    width: 47%;
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes at least 100% of the viewport height */
+}
+
+        header, nav, main, footer {
+            padding: 1em;
+        }
+
+        nav {
+    background-color: #410061;
+    color: #fff;
+    padding: 1%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 14%; /* Adjust as needed */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    margin: 1em; /* Increase the margin to add more spacing */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    display: block;
+    width: auto;
+}
+
+        nav button {
+            font-size: 1em;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #6c3483;
+        }
+
+        main {
+    flex: 1;
+    margin-left: 25%; /* Adjust as needed */
+}
+
+.copyright-text {
+    margin-top: auto;
+    text-align: center;
+}
+
+section {
+    padding: 4%;
+    text-align: center;
+}
+
+section img {
+    max-width: 100%; /* Adjust as needed */
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+       
+
+        footer {
+    background-color: #410061;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em;
+    border-top: 1px solid #6c3483;
+    width: 100%;
+    position: fixed;
+    left: 0; /* Set left to 0 to ensure it extends to the left */
+    bottom: 0;
+}
+
+form {
+    max-width: 80%; /* Adjust as needed */
+    margin: 4% auto;
+    padding: 2%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 2%;
+    margin: 2% 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+        
+
+
+
+
+
+
+        .left-button, .right-button {
+            background-color: #8e44ad;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+
+
+        .left-button:hover, .right-button:hover {
+            background-color: #6c3483;
+        }
+
+
+        .right-button {
+            background-color: #8e44ad;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .right-button:hover {
+            background-color: #6c3483;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        form {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #8e44ad;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6c3483;
+        }
+        
+
+
+
+
+        section {
+            padding: 4%;
+            text-align: left; /* Centered from the left side */
+        }
+
+        section h1 {
+            margin: 0;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 0;
+        }
+
+
+        .section {
+            padding: 2em;
+            text-align: left;
+        }
+
+        .section h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            margin: 1em 0; /* Add some margin for spacing */
+            padding-left: 5%;
+        }
+
+    .container {
+    /* ... your existing styles ... */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.button-container {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+
+        .left-button, .right-button {
+            background-color: #ffffff;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-button:hover, .right-button:hover {
+            background-color: #6c3483;
+        }
+
+        
+
+
+        .light-blue-text {
+            color: #3498db; /* Light blue color code */
+        }
+
+
+        .light-green-text {
+            color: #2ecc71; /* Light green color code */
+        }
+
+        .light-purple-text {
+            color: #9b59b6; /* Light purple color code */
+        }
+        .light-red-text {
+            color: #e95454; /* Light purple color code */
+        }
+
+
+ .light-yelow-text {
+            color: #c7ba07; /* Light purple color code */
+        }
+
+        .light-brown-text {
+            color: #f17500; /* Light purple color code */
+        }
+
+        .light-purple-text {
+            color: #7000f1; /* Light purple color code */
+        }
+
+
+
+
+
+        .big-title {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+    font-size: xx-large;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+<nav>
+    <a href="index.html">
+        <button class="logo_button">
+            <img class="logo_bilde"
+            src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRuxG8WrsIawpFwTDcLQ3OUgYfySWLrQNTLF6nfBYt-cx5f8L6fYFUjA9wTmj1iBCMSrmSMBx6q1JAR0OLMxMU4BBF0=s2560"
+              alt="Logo" width="170" height="100">
+             
+        </button>
+    </a>
+    <a href="index.html"><button>Sākums</button></a>
+    <a href="Lessons.html"><button>Profils</button></a>
+    <a href="Practice.html"><button>Teorija</button></a>
+    <a href="About Us.html"><button>Uzdevumi</button></a>
+    <a href="Contact Us.html"><button>Atsauksmes</button></a>
+    <a href="kkjauns.html"><button>Par mums</button></a>
+
+</nav>
+
+
+
+<section>
+    <h1 class="big-title">Past Simple</h1>
+</section>
+<section>
+    <h1>Regulāro darbības vārdu pareizrakstība Past Simple formā</h1>
+    <p>
+        • Ja darbības vārda sākuma forma <span class="light-green-text">beidzas ar patskani -e</span>, veidojot Past Simple formu (to liv<span class="light-green-text">e</span> — liv<span class="light-green-text">ed</span>), šis patskanis tiek izlaists.<br>
+        <p></p>
+        • Ja nenoteiksmes vārda <span class="light-purple-text">galotnē ir galotne -y un pirms tās ir līdzskanis</span>, -y vietā parādās -i (to t<span class="light-purple-text">r</span><span class="light-green-text">y</span> — tr<span class="light-green-text">ied</span>).<br>
+        • Ja nenoteiksmes galotnē <span class="light-red-text">pirms -y ir patskanis</span>, pamats nemainās (to pl<span class="light-red-text">a</span><span class="light-green-text">y</span> — play<span class="light-green-text">ed</span>).<br>
+        • Ja nenoteiksme <span class="light-blue-text">beidzas ar līdzskaņa -l</span>, tā tiek dubultota (to cance<span class="light-blue-text">l</span> — cance<span class="light-blue-text">ll</span><span class="light-green-text">ed</span>).<br>
+        • Ja nenoteiksme <span class="light-yelow-text">sastāv no vairākām zilbēm un beidzas ar jebkuru līdzskani</span>, šis līdzskanis tiek dubultots (to forma<span class="light-yelow-text">t</span> — forma<span class="light-yelow-text">tt</span><span class="light-green-text">ed</span>).<br>
+        • Ja nenoteiksmes <span class="light-brown-text">vārdam ir tikai viena zilbe un tas beidzas ar līdzskani pēc īsa patskaņa</span>, pēdējais līdzskanis tiek dubultots (to sto<span class="light-brown-text">p</span> — sto<span class="light-brown-text">pp</span><span class="light-green-text">ed</span>)<br>
+        Nepakļaujas šim noteikumam darbības vārdi ar <span class="light-purple-text">-w</span> un <span class="light-purple-text">-x</span> (to fi<span class="light-purple-text">x</span>  — fi<span class="light-purple-text">x</span><span class="light-green-text">ed</span>; to glow — glowed).
+    </p>
+
+
+    <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYToo50Yuw_Gi0_6LBYKn0ib8SkVA3WjwC1oqDw8NvRkhnZn_d22NvM4229a8qqeufCOxlmUMLXnsJYkMfvdlfEw2W6MjA=s1600" width="70%" height="70%" style="display: block; margin: auto;">
+</section>
+
+
+
+<div class="button-container">
+    <a href="past_simple.html" class="left-button">
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYS0Tqify-cynmc5A9UPYWC4VVBM3RZ6Xgq6Jk1Mohb3fB7HAq1rEXZa3vXibkIHXUhaGnnNoWxbJCuiDtmeKjcnCGb1ew=s2560" width="50px"/>
+    </a>
+
+    <div class="copyright-text">
+        <p>&copy; 2023 Eslit</p>
+    </div>
+
+    <a href="past_simple3.html" class="right-button">
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTLeB1jlLND8I0xYj8sccEl6pJ3uAqtzPDVHzSI_GJXxmwrqXpSsfX4ezi9JKrEiCn2u8w6jO0ybeI4KezAxnbPudF-jg=s2560" width="50px"> 
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</body>
+</html>
