@@ -238,7 +238,7 @@
             text-align: center;
             margin: 20px 0;
             width: 100%;
-            font-size: xx-large;
+            font-size: 300%;
         }
         
         #explanation-image {
@@ -297,6 +297,10 @@
             width: 5%;
             border-radius: 10px;
         }
+
+        .light-green-text {
+            color: #2ecc71; /* Light green color code */
+        }
     </style>
 </head>
 
@@ -341,7 +345,7 @@
             </div>
 
             <button id="try-again-btn" onclick="loadRandomQuestion()" style="display: none;">Meiģināt Velreiz</button>
-            <button id="next-btn" onclick="loadNextQuestion()" style="display: none;">Nākamais Jautājums</button>
+            <button id="next-btn" onclick="loadNextQuestion()" style="display: none;">Meiģināt Velreiz</button>
         </div>
 
 
@@ -349,25 +353,25 @@
             const quizData = [{
                     question: "  Izvēlies trūkstošo vārdu pareizajā formā: <p></p>   I ..... a delicious sandwich for lunch today. ",
                     options: ["eat", "ate", "was/were eating", "will eat"],
-                    correctAnswer: "ate",
+                    correctAnswer: '<span class="light-green-text">"ate"</span>',
                     explanation: "<p></p>ate<p></p>Ir pareizs, jo tas ir vienkāršās pagātnes (Past Simple) laiks. To lieto, lai apzīmētu darbību, kas notikusi noteiktā laikā pagātnē un kura ir pagājusi. Veidošana: ja regulārs - pievienojiet darbības vārdam galotni -ed, ja neregulārs - mēs meklējam Past Simple formu neregulārā darbības vārda tabulā.<p></p>eat<p></p>Nav pareizs, jo tas ir vienkāršās tagadnes (Present Simple) laiks. To lieto, lai apzīmētu parastas, regulāri atkārtojošās vai pastāvīgas darbības, piemēram, kad runājam par kāda cilvēka ieradumiem, ikdienas rutīnu, darba grafiku. Veidošana: ja ir i/you/we/they + nenoteiksme, ja he/she/it + nenotheksme + s.<p></p>was/were eating<p></p>Nav pareizs, jo tas ir bezgalīgā pagātne (Past Continuos) laiks. Tas pagātnes laiks, kas attiecas uz notikumu vai procesu, kas noticis kādā pagātnes brīdī. Šis pagātnes brīdis ir jānorāda. Tas var būt konkrēts laiks, norāde uz kādu laika brīdi vai, galējā gadījumā, netieši izrietēt no konteksta. Veidošana: i/you/we/they + was + nenoteiksme, he/she/it + were + nenoteiksme + ing.<p></p>will eat<p></p>Nav pareizs, jo tas ir vienkāršās nākotnes (Future Simple) laiks. To lieto, runājot par spontāniem lēmumiem, nākotnes notikumiem, kurus mēs nevaram ietekmēt, solījumiem, brīdinājumiem un pat draudiem. Veidošana: will + nenoteiksme<p></p>",
                     explanationImage: 'style="width:70%; height:70%;" src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRkKhuaHHR5kx9SlUqYBtyU0k79ajIlPdFnQ7WlG3qdl4qmUHB-NZUdSV_Lp5UowW1a274Hig3vdD5eWrJTFaboMOkuCg=s1600"'
                 }, {
                     question: "   Izvēlies trūkstošo vārdu pareizajā formā: <p></p>            I ..... to the doctor yesterday. ",
                     options: ["went", "go", "was/were going", "will go"],
-                    correctAnswer: "went",
+                    correctAnswer: '<span class="light-green-text">"went"</span>',
                     explanation: "<p></p>went<p></p>Ir pareizs, jo tas ir vienkāršās pagātnes (Past Simple) laiks. To lieto, lai apzīmētu darbību, kas notikusi noteiktā laikā pagātnē un kura ir pagājusi. Veidošana: ja regulārs - pievienojiet darbības vārdam galotni -ed, ja neregulārs - mēs meklējam Past Simple formu neregulārā darbības vārda tabulā.<p></p>go<p><p/>Nav pareizs, jo tas ir vienkāršās tagadnes (Present Simple) laiks. To lieto, lai apzīmētu parastas, regulāri atkārtojošās vai pastāvīgas darbības, piemēram, kad runājam par kāda cilvēka ieradumiem, ikdienas rutīnu, darba grafiku. Veidošana: ja ir i/you/we/they + nenoteiksme, ja he/she/it + nenotheksme + s.<p></p>was/were going<p></p>Nav pareizs, jo tas ir bezgalīgā pagātne (Past Continuos) laiks. Tas pagātnes laiks, kas attiecas uz notikumu vai procesu, kas noticis kādā pagātnes brīdī. Šis pagātnes brīdis ir jānorāda. Tas var būt konkrēts laiks, norāde uz kādu laika brīdi vai, galējā gadījumā, netieši izrietēt no konteksta. Veidošana: i/you/we/they + was + nenoteiksme, he/she/it + were + nenoteiksme + ing<p></p>will go<p></p>Nav pareizs, jo tas ir vienkāršās nākotnes (Future Simple) laiks. To lieto, runājot par spontāniem lēmumiem, nākotnes notikumiem, kurus mēs nevaram ietekmēt, solījumiem, brīdinājumiem un pat draudiem. Veidošana: will + nenoteiksme<p></p>",
                     explanationImage: 'style="width:70%; height:70%;" src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRngvVLoH8tKSGStmtfQYdpFKE7beslSH3nLIj6ihD0_i2CebObY00bJI0_-ztwTLj_2Ukqgm5312j2T81FceR_P6bsZA=s1600"'
                 }, {
                     question: "  Izvēlies trūkstošo vārdu pareizajā formā: <p></p>            My mother ...... a wonderful dinner last night ",
                     options: ["cooked", "will cook", "cook", "cooking"],
-                    correctAnswer: "cooked",
+                    correctAnswer: '<span class="light-green-text">"cooked"</span>',
                     explanation: "<p></p>cooked<p></p>Ir pareizs, jo tas ir vienkāršās pagātnes (Past Simple) laiks. To lieto, lai apzīmētu darbību, kas notikusi noteiktā laikā pagātnē un kura ir pagājusi. Veidošana: ja regulārs - pievienojiet darbības vārdam galotni -ed, ja neregulārs - mēs meklējam Past Simple formu neregulārā darbības vārda tabulā.<p></p>cook<p></p>Nav pareizs, jo tas ir vienkāršās tagadnes (Present Simple) laiks. To lieto, lai apzīmētu parastas, regulāri atkārtojošās vai pastāvīgas darbības, piemēram, kad runājam par kāda cilvēka ieradumiem, ikdienas rutīnu, darba grafiku. Veidošana: ja ir i/you/we/they + nenoteiksme, ja he/she/it + nenotheksme + s.<p></p>was/were cooking<p></p>Nav pareizs, jo tas ir bezgalīgā pagātne (Past Continuos) laiks. Tas pagātnes laiks, kas attiecas uz notikumu vai procesu, kas noticis kādā pagātnes brīdī. Šis pagātnes brīdis ir jānorāda. Tas var būt konkrēts laiks, norāde uz kādu laika brīdi vai, galējā gadījumā, netieši izrietēt no konteksta. Veidošana: i/you/we/they + was + nenoteiksme, he/she/it + were + nenoteiksme + ing.<p></p>will cook <p></p>Nav pareizs, jo tas ir vienkāršās nākotnes (Future Simple) laiks. To lieto, runājot par spontāniem lēmumiem, nākotnes notikumiem, kurus mēs nevaram ietekmēt, solījumiem, brīdinājumiem un pat draudiem. Veidošana: will + nenoteiksme<p></p>",
                     explanationImage: 'style="width:70%; height:70%;" src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSJtJdUDNX2DwkdTmhjdZOj1bUsahzzXs5w_7ufIjuXJuN-Jk1Ictj3aXUm3N3JTcgE2y7QVYXsp_j_9c3f27f7KSZnSg=s1600"'
                 }, {
                     question: "      Izvēlies trūkstošo vārdu pareizajā formā: <p></p>          I ....... a letter to my grandmother last week. ",
                     options: ["wrote", "write", "writing", "will write"],
-                    correctAnswer: "wrote",
+                    correctAnswer: '<span class="light-green-text">"wrote"</span>',
                     explanation: "<p></p>wrote<p></p>Ir pareizs, jo tas ir vienkāršās pagātnes (Past Simple) laiks. To lieto, lai apzīmētu darbību, kas notikusi noteiktā laikā pagātnē un kura ir pagājusi. Veidošana: ja regulārs - pievienojiet darbības vārdam galotni -ed, ja neregulārs - mēs meklējam Past Simple formu neregulārā darbības vārda tabulā.<p></p>write<p></p>Nav pareizs, jo tas ir vienkāršās tagadnes (Present Simple) laiks. To lieto, lai apzīmētu parastas, regulāri atkārtojošās vai pastāvīgas darbības, piemēram, kad runājam par kāda cilvēka ieradumiem, ikdienas rutīnu, darba grafiku. Veidošana: ja ir i/you/we/they + nenoteiksme, ja he/she/it + nenotheksme + s.<p></p>was/were writing<p></p>Nav pareizs, jo tas ir bezgalīgā pagātne (Past Continuos) laiks. Tas pagātnes laiks, kas attiecas uz notikumu vai procesu, kas noticis kādā pagātnes brīdī. Šis pagātnes brīdis ir jānorāda. Tas var būt konkrēts laiks, norāde uz kādu laika brīdi vai, galējā gadījumā, netieši izrietēt no konteksta. Veidošana: i/you/we/they + was + nenoteiksme, he/she/it + were + nenoteiksme + ing.<p></p>will write<p></p>Nav pareizs, jo tas ir vienkāršās nākotnes (Future Simple) laiks. To lieto, runājot par spontāniem lēmumiem, nākotnes notikumiem, kurus mēs nevaram ietekmēt, solījumiem, brīdinājumiem un pat draudiem. Veidošana: will + nenoteiksme<p></p>",
                     explanationImage: 'style="width:70%; height:70%;" src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTTD69eU0eQDTikDbOVXKLCY8bTij5bcMTtFPtK0i2c3aBOxiWO3o1qEz3wrqdtuYAgweOFv7z1SjjyKZA-W3EQCBtT=s1600"'
 

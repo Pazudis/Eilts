@@ -250,7 +250,7 @@
             text-align: center;
             margin: 20px 0;
             width: 100%;
-            font-size: xx-large;
+            font-size: 300%;
         }
         
         #explanation-image {
@@ -308,6 +308,9 @@
             height: auto;
             border-radius: 10px;
         }
+        .light-green-text {
+            color: #2ecc71; /* Light green color code */
+        }
     </style>
 </head>
 
@@ -349,7 +352,7 @@
             <button id="submit-btn" onclick="checkAnswer()">Iesniegt</button>
             <div id="result-container"></div>
             <button id="try-again-btn" onclick="loadRandomQuestion()" style="display: none;">Meiģināt Velreiz</button>
-            <button id="next-btn" onclick="loadNextQuestion()" style="display: none;">Nākamais Jautājums</button>
+            <button id="next-btn" onclick="loadNextQuestion()" style="display: none;">Meiģināt Velreiz</button>
         </div>
 
 
@@ -358,25 +361,25 @@
             const quizData = [{
                     question: "Kurš no šiem vārdiem nav vienkāršajā pagātnē",
                     options: ["dealt", "drew", "fed", "will find"],
-                    correctAnswer: "will find",
+                    correctAnswer: '<span class="light-green-text">"will find"</span>',
                     explanation: "<p></p>dealt, drew, fed <p></p>vienkāršās pagātnes (Past Simple) laiku lieto, lai apzīmētu darbību, kas notikusi noteiktā laikā pagātnē un kura ir pagājusi. Veidošana: ja regulārs - pievienojiet darbības vārdam galotni -ed, ja neregulārs - mēs meklējam Past Simple formu neregulārā darbības vārda tabulā.<p></p>will find <p></p>ienkāršās nākotnes (Future Simple) laiku lieto, runājot par spontāniem lēmumiem, nākotnes notikumiem, kurus mēs nevaram ietekmēt, solījumiem, brīdinājumiem un pat draudiem. Veidošana: will + nenoteiksme<p></p>",
                     explanationImage: 'style="width:80%; height:80%;" src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSEu2QB-goAnGPisoH56IeeBErh0qqg6kUChHvtMJPBfXExGm3kHZRBjNiZKKAGZMJb6quAva4GsLXoMUIYq7rgGgFZfg=s1600"'
                 }, {
                     question: "Kurš no šiem vārdiem nav vienkāršajā pagātnē",
                     options: ["grew", "hurt", "will leave", "led"],
-                    correctAnswer: "will leave",
+                    correctAnswer: '<span class="light-green-text">"will leave"</span>',
                     explanation: "<p></p>grew, hurt, led <p></p>vienkāršās pagātnes (Past Simple) laiku lieto, lai apzīmētu darbību, kas notikusi noteiktā laikā pagātnē un kura ir pagājusi. Veidošana: ja regulārs - pievienojiet darbības vārdam galotni -ed, ja neregulārs - mēs meklējam Past Simple formu neregulārā darbības vārda tabulā.<p></p>will leave <p></p>vienkāršās nākotnes (Future Simple) laiku lieto, runājot par spontāniem lēmumiem, nākotnes notikumiem, kurus mēs nevaram ietekmēt, solījumiem, brīdinājumiem un pat draudiem. Veidošana: will + nenoteiksme<p></p>",
                     explanationImage: 'style="width:80%; height:80%;" src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYQc40Xh6Ta_pT7JmoRMULqxhNiebOBHVCU_-r0cWJ772e8SxKhK3govIm0fpxcJeLFox3RlC2dLUGVi170cGqYMB7w0=s1600"'
                 }, {
                     question: "Kurš no šiem vārdiem nav vienkāršajā pagātnē",
                     options: ["saw", "said", "ran", "will rise"],
-                    correctAnswer: "will rise",
+                    correctAnswer: '<span class="light-green-text">"will rise"</span>',
                     explanation: "<p></p>saw, said, ran<p></p>vienkāršās pagātnes (Past Simple) laiku lieto, lai apzīmētu darbību, kas notikusi noteiktā laikā pagātnē un kura ir pagājusi. Veidošana: ja regulārs - pievienojiet darbības vārdam galotni -ed, ja neregulārs - mēs meklējam Past Simple formu neregulārā darbības vārda tabulā.<p></p>will rise <p></p>ienkāršās nākotnes (Future Simple) laiku lieto, runājot par spontāniem lēmumiem, nākotnes notikumiem, kurus mēs nevaram ietekmēt, solījumiem, brīdinājumiem un pat draudiem. Veidošana: will + nenoteiksme<p></p>",
                     explanationImage: 'style="width:80%; height:80%;" src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYQGQDEF-dUnJYefb4dTgqGDQiev0ggqYFcwSOviQMtLlolUNrSpidPeBU_xFf-1NKZw2ZEYY4OtvOlXTPlztzMQZyGt=s1600"'
                 }, {
                     question: "Kurš no šiem vārdiem nav vienkāršajā pagātnē",
                     options: ["arose", "will become", "bent", "bled"],
-                    correctAnswer: "will become",
+                    correctAnswer: '<span class="light-green-text">"will become"</span>',
                     explanation: "<p></p>arose, bent, bled <p></p>vienkāršās pagātnes (Past Simple) laiku lieto, lai apzīmētu darbību, kas notikusi noteiktā laikā pagātnē un kura ir pagājusi. Veidošana: ja regulārs - pievienojiet darbības vārdam galotni -ed, ja neregulārs - mēs meklējam Past Simple formu neregulārā darbības vārda tabulā.<p></p>will become <p></p>ienkāršās nākotnes (Future Simple) laiku lieto, runājot par spontāniem lēmumiem, nākotnes notikumiem, kurus mēs nevaram ietekmēt, solījumiem, brīdinājumiem un pat draudiem. Veidošana: will + nenoteiksme<p></p>",
                     explanationImage: 'style="width:80%; height:80%;" src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSFlcc2MQmN_Dud0XVPRCB7cevibzpLOUn66wKksG_pfsa7m-mfohyQqMJlOTmZwpmy5tgBMNCwhemLz3oO4zK1-bjC=s1600"'
                 },

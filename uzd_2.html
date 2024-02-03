@@ -262,7 +262,7 @@
             text-align: center;
             margin: 20px 0;
             width: 100%;
-            font-size: xx-large;
+            font-size: 300%;
         }
         
         .modal {
@@ -288,6 +288,11 @@
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+        }
+
+
+        .light-green-text {
+            color: #2ecc71; /* Light green color code */
         }
     </style>
 </head>
@@ -332,7 +337,7 @@
             <button id="submit-btn" onclick="checkAnswer()">Iesniegt</button>
             <div id="result-container"></div>
             <button id="try-again-btn" onclick="loadRandomQuestion()" style="display: none;">Mēģināt Vēlreiz</button>
-            <button id="next-btn" onclick="loadNextQuestion()" style="display: none;">Nākamais Jautājums</button>
+            <button id="next-btn" onclick="loadNextQuestion()" style="display: none;">Meiģināt Velreiz</button>
         </div>
 
 
@@ -340,7 +345,7 @@
             const quizData = [{
                     question: "Saliec teikuma uzbūvi pareizā secībā?",
                     options: ["Priekšmets + Darbības vārds pagātnes formā + Papildinājums", "Darbības vārds pagātnes formā  + Priekšmets + Papildinājums", "Papildinājums + Darbības vārds pagātnes formā  + Priekšmets", "Priekšmets + Papildinājums + Darbības vārds pagātnes formā"],
-                    correctAnswer: "Priekšmets + Darbības vārds pagātnes formā + Papildinājums",
+                    correctAnswer: '<span class="light-green-text">"Priekšmets + Darbības vārds pagātnes formā + Papildinājums"</span>',
                     explanation: "<p></p>Angļu valodā teikuma uzbūves noteikumi ir diezgan stingri, ir svarīga vārdu secība.<p></p>",
                     explanationImage: 'style="width:80%; height:100%;" src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYR0tvm0mVX20i3ulWjUZhO-yRQ3lXLSY0vWuJ9zB5RR6qrACNfdMErW5XifFm8LlmAo0QilKGoBcaUNsH9AVW8IuUvQ=s1600"'
                 },
