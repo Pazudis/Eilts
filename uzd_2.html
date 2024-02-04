@@ -10,7 +10,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            /* background-color: #f4ebff; */
+            
             color: #555;
             min-height: 100vh;
             display: flex;
@@ -27,15 +27,13 @@
             top: 0;
             width: 100%;
             height: 100%;
-            /* overflow: auto; */
-            /* background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.4); */
+           
         }
         
         .modal-content {
             margin: auto;
             text-align: center;
-            /* opacity: 0; */
+            
         }
         
         .modal-image {
@@ -245,7 +243,7 @@
             border: 10px;
             border-radius: 5px;
             cursor: pointer;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); 
             border: 1px solid #000000;
         }
         
@@ -292,11 +290,11 @@
 
 
         .light-green-text {
-            color: #2ecc71; /* Light green color code */
+            color: #2ecc71; 
         }
 
         .light-red-text {
-            color: #e95454; /* Light purple color code */
+            color: #e95454; 
         }
     </style>
 </head>
@@ -425,7 +423,7 @@
                     tryAgainBtn.style.display = "none";
                     nextBtn.style.display = "block";
                     const explanationImage = document.getElementById("explanation-image");
-                    // explanationImage.src = quizData[currentQuestionIndex].explanationImage;
+                    
                 } else {
                     resultContainer.innerHTML = "Nepareizi!" + quizData[currentQuestionIndex].explanation +
                         "<br>Pareizā atbilde: " + quizData[currentQuestionIndex].correctAnswer + `<p></p><img onclick="enlarge(this)" ${quizData[currentQuestionIndex].explanationImage}>`;
@@ -433,7 +431,7 @@
                     tryAgainBtn.style.display = "block";
                     nextBtn.style.display = "none";
                     const explanationImage = document.getElementById("explanation-image");
-                    // explanationImage.src = quizData[currentQuestionIndex].explanationImage;
+                    
                 }
 
                 submitBtn.style.display = "none";
@@ -472,11 +470,10 @@
 
             function openModal(imageSrc) {
                 const modal = document.getElementById("myModal");
-                // const modalImage = document.getElementById("modalImage");
+                
 
                 modal.style.display = "block";
-                // modalImage.src = imageSrc;
-                // modalImage.style.width = "50px";
+                
             }
 
             function closeModal() {

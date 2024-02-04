@@ -6,8 +6,8 @@
   <title>Login</title>
   <style>
     body {
-      background-color: #2d0b33; /* Dark purple background */
-      color: #ffffff; /* White text */
+      background-color: #2d0b33; 
+      color: #ffffff; 
       font-family: Arial, sans-serif;
       display: flex;
       align-items: center;
@@ -18,9 +18,9 @@
 
     .login-container {
       position: relative;
-      background-color: #3b145a; /* Darker purple container */
+      background-color: #3b145a; 
       padding: 2%;
-      padding-bottom: 2%; /* Increase padding-bottom for a longer square at the bottom */
+      padding-bottom: 2%; 
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
@@ -28,11 +28,11 @@
     }
 
     .logo {
-      width: 20%; /* Adjust the size of the logo */
+      width: 20%; 
       height: 20%;
-      margin-bottom: 10px; /* Adjust margin as needed */
+      margin-bottom: 10px; 
       position: absolute;
-      top: 0; /* Position at the top of the container */
+      top: 0; 
       left: 50%;
       transform: translateX(-50%);
     }
@@ -41,54 +41,54 @@
       width: calc(100% - 20px);
       padding: 10px;
       margin-bottom: 15px;
-      border: 1px solid #634b6f; /* Border color */
+      border: 1px solid #634b6f; 
       border-radius: 4px;
-      background-color: #2d0b33; /* Input background color */
-      color: #ffffff; /* Input text color */
+      background-color: #2d0b33; 
+      color: #ffffff; 
     }
 
     button {
       width: calc(100% - 5%);
       padding: 10px;
-      background-color: #9146a1; /* Button color */
-      color: #ffffff; /* Button text color */
+      background-color: #9146a1; 
+      color: #ffffff; 
       border: none;
       border-radius: 4px;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: #6b2d75; /* Darker button color on hover */
+      background-color: #6b2d75; 
     }
 
     .rules-button {
       position: absolute;
-      bottom: 5%; /* Adjusted bottom position for a bit lower square */
+      bottom: 5%; 
       right: 5%;
       width: 20%;
-      height: 10%; /* Increase height for a taller square */
-      background-color: #a020f0; /* Bright purple color for the square */
-      color: #ffffff; /* Text color */
+      height: 10%;
+      background-color: #a020f0; 
+      color: #ffffff; 
       border: none;
       border-radius: 4px;
       cursor: pointer;
     }
 
     .rules-button:hover {
-      background-color: #800080; /* Darker purple on hover */
+      background-color: #800080; 
     }
 
 
 
     .error-message {
-      color: #ff0000; /* Red text color for error messages */
+      color: #ff0000; 
     }
 
   </style>
 </head>
 <body>
 
-  <!-- Logo on top of the container -->
+  
   <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRuxG8WrsIawpFwTDcLQ3OUgYfySWLrQNTLF6nfBYt-cx5f8L6fYFUjA9wTmj1iBCMSrmSMBx6q1JAR0OLMxMU4BBF0=s2560" alt="Logo" class="logo">
 
   <div class="login-container">
@@ -97,7 +97,7 @@
     <button onclick="validateLogin()">Login</button>
     <button class="rules-button" onclick="location.href='noteikumi.html'">kondicijas</button>
 
-    <!-- Error message container -->
+    
     <div id="error-message" class="error-message"></div>
   </div>
 
@@ -107,12 +107,12 @@
       var password = document.getElementById("password").value;
       var errorMessage = document.getElementById("error-message");
 
-      // Check if the entered credentials are correct
+      
       if (username === "user" && password === "123") {
-        // Redirect to a different website
+        
         window.location.href = "index.html";
       } else {
-        // Display error message
+        
         errorMessage.textContent = "Incorrect username or password. Please try again.";
       }
     }

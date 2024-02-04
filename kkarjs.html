@@ -221,7 +221,7 @@
             border: 10px;
             border-radius: 5px;
             cursor: pointer;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); 
             border: 1px solid #000000;
         }
         
@@ -257,15 +257,13 @@
             top: 0;
             width: 50%;
             height: 50%;
-            /* overflow: auto; */
-            /* background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.4); */
+           
         }
         
         .modal-content {
             margin: auto;
             text-align: center;
-            /* opacity: 0; */
+            
         }
         
         .modal-image {
@@ -299,11 +297,11 @@
         }
 
         .light-green-text {
-            color: #2ecc71; /* Light green color code */
+            color: #2ecc71; 
         }
 
         .light-red-text {
-            color: #e95454; /* Light purple color code */
+            color: #e95454; 
         }
 
     </style>
@@ -346,7 +344,7 @@
             <ul id="options-container"></ul>
             <button id="submit-btn" onclick="checkAnswer()">Iesniegt</button>
             <div id="result-container">
-                <!-- <img id="explanation-image"> -->
+                
             </div>
 
             <button id="try-again-btn" onclick="loadRandomQuestion()" style="display: none;">Meiģināt Velreiz</button>
@@ -453,7 +451,7 @@
                     tryAgainBtn.style.display = "none";
                     nextBtn.style.display = "block";
                     const explanationImage = document.getElementById("explanation-image");
-                    // explanationImage.src = quizData[currentQuestionIndex].explanationImage;
+                    
                 } else {
                     resultContainer.innerHTML = "Nepareizi!" + quizData[currentQuestionIndex].explanation +
                         "<br>Pareizā atbilde: " + quizData[currentQuestionIndex].correctAnswer + `<p></p><img onclick="enlarge(this)" ${quizData[currentQuestionIndex].explanationImage}>`;
@@ -461,7 +459,7 @@
                     tryAgainBtn.style.display = "block";
                     nextBtn.style.display = "none";
                     const explanationImage = document.getElementById("explanation-image");
-                    // explanationImage.src = quizData[currentQuestionIndex].explanationImage;
+                    
                 }
 
                 submitBtn.style.display = "none";
@@ -500,11 +498,10 @@
 
             function openModal(imageSrc) {
                 const modal = document.getElementById("myModal");
-                // const modalImage = document.getElementById("modalImage");
+                
 
                 modal.style.display = "block";
-                // modalImage.src = imageSrc;
-                // modalImage.style.width = "50px";
+                
             }
 
             function closeModal() {

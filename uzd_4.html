@@ -27,7 +27,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the container takes at least 100% of the viewport height */
+    min-height: 100vh; 
 }
 
     
@@ -52,14 +52,14 @@
             top: 0;
             left: 0;
             bottom: 0;
-            width: 14%; /* Changed from 280px to percentage */
+            width: 14%; 
         }
     
         nav a {
     color: #fff;
     text-decoration: none;
     padding: 1em 1.5em;
-    margin: 1em; /* Increase the margin to add more spacing */
+    margin: 1em; 
     border-radius: 8px;
     transition: background-color 0.3s;
     display: block;
@@ -78,8 +78,8 @@
     }
     
     main {
-            flex: 1; /* Take remaining vertical space */
-            margin-left: 25%; /* Changed from 140px to percentage */
+            flex: 1; 
+            margin-left: 25%; 
         }
 
         section {
@@ -88,7 +88,7 @@
         }
 
         section img {
-            max-width: 100%; /* Changed from 200% to percentage */
+            max-width: 100%; 
             height: auto;
             border-radius: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -101,7 +101,7 @@
 
     
         form {
-            max-width: 60%; /* Changed from 600px to percentage */
+            max-width: 60%; 
             margin: 2em auto;
             padding: 1em;
             background-color: #fff;
@@ -142,13 +142,13 @@
     
     #quiz-container {
   max-width: 100%;
-  margin: 10px auto; /* Adjusted margin */
+  margin: 10px auto; 
   background-color: #fff;
-  padding: 5px; /* Adjusted padding */
+  padding: 5px; 
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  height: 20%; /* Set a specific height, adjust as needed */
+  height: 20%; 
   width: 50%;
 }
 
@@ -176,23 +176,23 @@
 }
     
 .option {
-  margin-bottom: 10px; /* Increased margin for spacing */
-  padding: 10px; /* Added padding for better visual separation */
-  border: 2px solid transparent; /* Increased border thickness */
+  margin-bottom: 10px; 
+  padding: 10px; 
+  border: 2px solid transparent; 
   transition: border-color 0.3s, background-color 0.3s;
-  cursor: pointer; /* Set cursor to pointer on hover */
+  cursor: pointer; 
 }
 
 .option:hover {
-  border-color: #6c3483; /* Dark purple border on hover */
+  border-color: #6c3483; 
 }
 
 .option.selected {
-  background-color: rgba(144, 238, 144, 0.5); /* Translucent green when selected */
+  background-color: rgba(144, 238, 144, 0.5); 
 }
 
 .option.selected:hover {
-  background-color: rgba(144, 238, 144, 0.5); /* Translucent green even on hover when selected */
+  background-color: rgba(144, 238, 144, 0.5); 
 }
 
 #result {
@@ -218,7 +218,7 @@
     
 
 .button-container {
-    margin-top: auto; /* Push the button container to the bottom of the flex container */
+    margin-top: auto; 
     display: flex;
     justify-content: space-between;
     padding: 1em;
@@ -233,7 +233,7 @@
             border: 10px;
             border-radius: 5px;
             cursor: pointer;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); 
             border: 1px solid #000000;
         }
 
@@ -253,7 +253,7 @@
 }
 
 .light-green-text {
-            color: #2ecc71; /* Light green color code */
+            color: #2ecc71; 
         }
 
     </style>
@@ -296,7 +296,7 @@
       
   
       <script>
-        // Define quiz questions and answers
+        
         const quizData = [
           {
             question: "?",
@@ -304,7 +304,7 @@
             correctAnswer: "",
             explanation: "",
           },
-          // Add more questions as needed
+          
         ];
       
         let currentQuestionIndex = -1;
@@ -377,7 +377,7 @@
           loadRandomQuestion();
         }
       
-        loadRandomQuestion(); // Load the first question on page load
+        loadRandomQuestion(); 
       </script>
       
       
