@@ -238,15 +238,15 @@
             border-top: 1px solid #ccc;
         }
         
-        .left-button,
-        .right-button {
+        .left-button, .right-button {
             background-color: #ffffff;
             color: #fff;
             padding: 0.5em 1em;
-            border: none;
+            border: 10px;
             border-radius: 5px;
             cursor: pointer;
-            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+            border: 1px solid #000000;
         }
         
         .left-button:hover,
@@ -349,7 +349,7 @@
             const quizData = [{
                     question: "Saliec teikuma uzbūvi pareizā secībā?",
                     options: ["Priekšmets + Darbības vārds pagātnes formā + Papildinājums", "Darbības vārds pagātnes formā  + Priekšmets + Papildinājums", "Papildinājums + Darbības vārds pagātnes formā  + Priekšmets", "Priekšmets + Papildinājums + Darbības vārds pagātnes formā"],
-                    correctAnswer: '<span class="light-green-text"><b>Priekšmets + Darbības vārds pagātnes formā + Papildinājums</b></span>',
+                    correctAnswer: 'Priekšmets + Darbības vārds pagātnes formā + Papildinājums',
                     explanation: '<p></p>Angļu valodā teikuma uzbūves noteikumi ir diezgan stingri, ir svarīga vārdu secība.<p></p>',
                     explanationImage: 'style="width:80%; height:100%;" src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYR0tvm0mVX20i3ulWjUZhO-yRQ3lXLSY0vWuJ9zB5RR6qrACNfdMErW5XifFm8LlmAo0QilKGoBcaUNsH9AVW8IuUvQ=s1600"'
                 },
