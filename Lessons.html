@@ -179,7 +179,7 @@
     background-color: #ffffff; 
     padding: 5%; 
     border-radius: 5%; 
-    margin-top: -65%; 
+    margin-top: -5%; 
 }
 
 .profile-image {
@@ -197,8 +197,8 @@
 }
 
 .additional-info {
-    margin-top: -20%; 
-}
+            margin-top: 0%; 
+        }
 
 .copyright-text {
     margin-top: 5%; 
@@ -210,12 +210,23 @@
     padding: 10px;
     border-radius: 5px;
     text-align: center;
-    margin: 20px 0;
+    margin: 5% 0;
     width: 100%;
     font-size: 300%;
 }
 
-
+.image-box {
+            background-color: #f8f8f8; 
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 0%; 
+        }
+        .image-box img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
         
     </style>
 </head>
@@ -251,28 +262,26 @@
         </div>
 
         <div class="user-info">
-            <label for="username">Vārds Uzvārds</label>
-            <P></P>
+            <label for="username">Vārds Uzvārds:</label>
+            <p></p>
 
             <label for="password">Parole:  &emsp; ********</label>
-            
+            <p></p>
+            <label for="gmail">Epasts: &emsp;your.email@gmail.com</label>  <p></p>
+
+            <label for="phone">Telefona numurs: &emsp;+371********</label>
         </div>
-         <img  /> </a>
-
-        <div >
-        <label for="gmail">Mail: &emsp;your.email@gmail.com</label>  <p></p>
-
-        <label for="phone">Telefona numurs: &emsp;123-456-7890</label>
-        
-        </div>
-
-    
     </div>
 
 
 
-
-
+    <section class="additional-info">
+        <h2>Additional Image</h2>
+        <div class="image-box">
+            <!-- Placeholder for the image, replace with actual image source -->
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYQ84sUaGqmb6782DZAD0a0ZSSHhB2aVIsdgMOTLzZGOgND1jnpOPpkkIQxidOxaTnc5EPyFaC7lJ9XPmjfVa3mtSVyOJg=s2560" alt="Additional Image">
+        </div>
+    </section>
 
 
 
