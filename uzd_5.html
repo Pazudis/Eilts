@@ -292,7 +292,7 @@
           
       </ul>
       <p id="question-counter"></p> 
-      <button id="submit-btn" onclick="checkAnswer()">Iesniegt</button>
+      <button id="submit-btn" style="height: 5ex; width: 15ex; font-size: large;" onclick="checkAnswer()">Iesniegt</button>
       <div  id="result-container"></div>
       <button id="try-again-btn" onclick="loadRandomQuestion()" style="display: none;">Meiģināt Velreiz</button>
       
@@ -386,7 +386,7 @@ function showQuestion() {
     optionsContainer.innerHTML = optionsHTML;
 
     
-    questionCounter.textContent = `You have completed ${currentQuestionIndex + 1} out of ${quizData.length} questions.`;
+    questionCounter.textContent = `Tu esi izpildijis ${currentQuestionIndex + 1} no ${quizData.length} jautājumiem.`;
 }
 
 function selectOption(optionIndex) {
@@ -530,7 +530,7 @@ loadRandomQuestion();
      
       
       <div class="button-container">
-        <a href="uzd_3.html" class="right-button">
+        <a href="uzd_4.html" class="right-button">
             <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYS0Tqify-cynmc5A9UPYWC4VVBM3RZ6Xgq6Jk1Mohb3fB7HAq1rEXZa3vXibkIHXUhaGnnNoWxbJCuiDtmeKjcnCGb1ew=s2560" width="50px"/>
         </a>
     

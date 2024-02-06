@@ -153,9 +153,25 @@
 }
 
 
+.image-button1 {
+            position: absolute;
+            top: 5%;
+            left: 7%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-
-
+.image-button1 img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            height: 200px;
+            width: 200px;
+        }
 
 
 
@@ -281,117 +297,28 @@
 
 
     <header>
-        <h1>Welcome to Learn English4</h1>
+        <h1>PAST SIMPLE TESTU IZVĒLE</h1>
     </header>
-    <H2>  </H2>
-    <div  id="quiz-container">
-        
-        <div id="question-container"></div>
-        <ul id="options-container"></ul>
-        <button id="submit-btn" onclick="checkAnswer()">Submit</button>
-        <div id="result-container"></div>
-        <button id="try-again-btn" onclick="loadRandomQuestion()" style="display: none;">Try Again</button>
-        <button id="next-btn" onclick="loadNextQuestion()" style="display: none;">Next Question</button>
-      </div>
-      
+    
+    <div class="image-button1" style="margin-top: 3%; width: 50%;height:50% ;">
+      <a href="uzd_5.html"><img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYR5VDbMeeb-aJS_6YZ7lWAMGQEyqGerNUQ6cZDere-GhiPl9dKNKw3324tTTTS2hW1A4lG9GWEtbhWEGb_frJ_3PvieZw=s2560" /></a>
+      <a></a>
+  </div>
   
-      <script>
-        
-        const quizData = [
-          {
-            question: "?",
-            options: [""],
-            correctAnswer: "",
-            explanation: "",
-          },
-          
-        ];
       
-        let currentQuestionIndex = -1;
-      
-        function loadRandomQuestion() {
-  currentQuestionIndex = Math.floor(Math.random() * quizData.length);
-  showQuestion();
-  document.getElementById("try-again-btn").style.display = "none";
-  document.getElementById("next-btn").style.display = "none";
-    }
-      
-        function showQuestion() {
-          const questionContainer = document.getElementById("question-container");
-          const optionsContainer = document.getElementById("options-container");
-          const resultContainer = document.getElementById("result-container");
-          const submitBtn = document.getElementById("submit-btn");
-          const nextBtn = document.getElementById("next-btn");
-      
-          questionContainer.innerHTML = `<p id="question">${quizData[currentQuestionIndex].question}</p>`;
-      
-          let optionsHTML = "";
-          quizData[currentQuestionIndex].options.forEach((option, index) => {
-            optionsHTML += `<li class="option" onclick="selectOption(${index})">${option}</li>`;
-          });
-          optionsContainer.innerHTML = optionsHTML;
-      
-          resultContainer.innerHTML = "";
-          submitBtn.style.display = "block";
-          nextBtn.style.display = "none";
-        }
-      
-        function selectOption(optionIndex) {
-  const options = document.querySelectorAll(".option");
-  options.forEach((option, index) => {
-    option.style.backgroundColor = index === optionIndex ? "rgba(144, 238, 144, 0.5)" : "#fff";
-  });
-    }
-      
-    function checkAnswer() {
-  const options = document.querySelectorAll(".option");
-  const selectedOption = Array.from(options).findIndex(
-    (option) => option.style.backgroundColor === "rgba(144, 238, 144, 0.5)"
-  );
-
-  const resultContainer = document.getElementById("result-container");
-  const submitBtn = document.getElementById("submit-btn");
-  const tryAgainBtn = document.getElementById("try-again-btn");
-  const nextBtn = document.getElementById("next-btn");
-      
-  if (selectedOption === -1) {
-    resultContainer.innerHTML = "Please select an answer.";
-    return;
-  }
-
-  if (quizData[currentQuestionIndex].options[selectedOption] === quizData[currentQuestionIndex].correctAnswer) {
-    resultContainer.innerHTML = "Correct! " + quizData[currentQuestionIndex].explanation;
-    tryAgainBtn.style.display = "none";
-    nextBtn.style.display = "block";
-  } else {
-    resultContainer.innerHTML = "Wrong! " + quizData[currentQuestionIndex].explanation +
-      "<br>Correct answer: " + quizData[currentQuestionIndex].correctAnswer;
-    tryAgainBtn.style.display = "block";
-    nextBtn.style.display = "none";
-  }
-
-  submitBtn.style.display = "none";
-    }
-      
-        function loadNextQuestion() {
-          loadRandomQuestion();
-        }
-      
-        loadRandomQuestion(); 
-      </script>
       
       
       <div class="button-container">
         <a href="uzd_3.html" class="right-button">
-            <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYS0Tqify-cynmc5A9UPYWC4VVBM3RZ6Xgq6Jk1Mohb3fB7HAq1rEXZa3vXibkIHXUhaGnnNoWxbJCuiDtmeKjcnCGb1ew=s2560" width="50px"/>
-        </a>
+          <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYS0Tqify-cynmc5A9UPYWC4VVBM3RZ6Xgq6Jk1Mohb3fB7HAq1rEXZa3vXibkIHXUhaGnnNoWxbJCuiDtmeKjcnCGb1ew=s2560" width="50px"/>
+      </a>
     
         <div class="copyright-text">
             <p>&copy; 2023 Eslit</p>
         </div>
     
-        <a href="uzd_5.html" class="right-button">
-            <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTLeB1jlLND8I0xYj8sccEl6pJ3uAqtzPDVHzSI_GJXxmwrqXpSsfX4ezi9JKrEiCn2u8w6jO0ybeI4KezAxnbPudF-jg=s2560" width="50px"> 
+        <a >
+            
         </a>
     
     
